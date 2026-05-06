@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insa Chopstick Workshop — Handcrafted in Seoul</title>
+  <meta name="description" content="Create your own handmade wooden chopsticks in Insadong, Seoul. A hands-on workshop experience." />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Stripe.js -->
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">
+      <span class="logo-mark">箸</span>
+      <span class="logo-text">INSA CHOPSTICK</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#location">Location</a>
+      <a href="#booking" class="nav-cta">Book Now</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#location" onclick="closeMobileMenu()">Location</a>
+    <a href="#booking" onclick="closeMobileMenu()">Book Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-image" style="background-image: url('photo/photo1.png');"></div>
+      <div class="hero-grain"></div>
+      <div class="hero-lines"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-tag">Handcraft Workshop</p>
+      <h1 class="hero-title">
+        Make Your Own<br />
+        <em>Chopsticks</em>
+      </h1>
+      <p class="hero-sub">Sand. Shape. Polish. Take them home.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary">Book a Session</a>
+        <a href="#about" class="btn btn-ghost">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><strong>~60 min</strong><span>Duration</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>All levels</strong><span>No experience needed</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>1–20 guests</strong><span>Group friendly</span></div>
+    <div class="stat-divider"></div>
+    <div class="stat"><strong>Take home</strong><span>Your finished chopsticks</span></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">About the Workshop</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>Craft Something<br /><em>Truly Yours</em></h2>
+          <p>Step into our Insadong workshop and learn the traditional art of chopstick-making. Using premium wood and hand tools, you'll sand, shape, and oil a pair of chopsticks from raw material to finished keepsake.</p>
+          <p>Our instructor guides you through every step — no experience needed. The result is a pair of chopsticks made entirely by your hands, ready to bring to your table at home.</p>
+          <ul class="feature-list">
+            <li>All materials and tools provided</li>
+            <li>Korean-speaking instructor (English available)</li>
+            <li>Spacious studio for up to 20 people</li>
+            <li>Take home your finished chopsticks</li>
+          </ul>
+        </div>
+        <div class="about-visual">
+          <div class="visual-card card-1">
+            <img src="photo/photo2.png" alt="Workshop Tool" class="card-img">
+            <div class="visual-icon">✦</div>
+            <p class="visual-label">Premium Selected Wood</p>
+          </div>
+          <div class="visual-card card-2">
+            <img src="photo/photo3.png" alt="Handcrafting" class="card-img">
+            <div class="visual-icon">◈</div>
+            <p class="visual-label">Traditional Techniques</p>
+          </div>
+          <div class="visual-card card-3">
+            <img src="photo/photo4.png" alt="Finished Product" class="card-img">
+            <div class="visual-icon">❧</div>
+            <p class="visual-label">A Lasting Keepsake</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <div class="section-label">What to Expect</div>
+      <h2 class="section-title">The Experience</h2>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Choose Your Wood</h3>
+          <p>Select from several types of premium wood, each with its own grain, tone, and character.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Shape & Sand</h3>
+          <p>Using hand planes and sandpaper, you'll shape the raw block into a pair of tapered chopsticks.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Oil & Finish</h3>
+          <p>Apply natural oil to bring out the grain and seal the wood. Watch your chopsticks come alive.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Take Them Home</h3>
+          <p>Wrap your finished chopsticks and carry them home — ready to use at your next meal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-label">Find Us</div>
+      <h2 class="section-title">Location</h2>
+      <div class="location-grid">
+        <div class="location-info">
+          <div class="location-detail">
+            <span class="detail-icon">📍</span>
+            <div>
+              <strong>Address</strong>
+              <p>Room 702, 7F, Dong-il Bldg, 23, Insadong-gil,<br />Jongno-gu, Seoul, Republic of Korea</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <span class="detail-icon">🚇</span>
+            <div>
+              <strong>Access</strong>
+              <p>Jongno 3-ga Station (Line 1, 3, 5) / Anguk Station (Line 3)<br />Located in the heart of Insadong Street</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <span class="detail-icon">🕐</span>
+            <div>
+              <strong>Opening Hours</strong>
+              <p>Mon – Sun: 09:00 – 19:00<br />(Open 365 days a year)</p>
+            </div>
+          </div>
+          <div class="location-detail">
+            <span class="detail-icon">✉️</span>
+            <div>
+              <strong>Contact</strong>
+              <p><a href="mailto:lkj1769@gmail.com">lkj1769@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-embed">
+            <!-- Google Maps Embed (Update with your API Key if needed) -->
+            <iframe
+              id="workshopMap"
+              width="100%"
+              height="100%"
+              style="border:0; border-radius: 12px;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=23+Insadong-gil+Seoul">
+            </iframe>
+            <div class="map-fallback">
+              <p>📍 Insadong-gil 23, Seoul</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section section-dark" id="booking">
+    <div class="container">
+      <div class="section-label light">Reserve Your Spot</div>
+      <h2 class="section-title light">Book a Session</h2>
+
+      <div class="booking-wrapper">
+        <form id="bookingForm" class="booking-form" novalidate>
+
+          <!-- Step 1: Session Details -->
+          <div class="form-step active" id="step1">
+            <h3 class="step-title">1. Choose Your Session</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="sessionDate">Date</label>
+                <input type="date" id="sessionDate" name="date" required />
+              </div>
+              <div class="form-group">
+                <label for="sessionTime">Time</label>
+                <select id="sessionTime" name="time" required>
+                  <option value="">Select a time</option>
+                  <option value="09:00">09:00 AM</option>
+                  <option value="10:00">10:00 AM</option>
+                  <option value="11:00">11:00 AM</option>
+                  <option value="12:00">12:00 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                  <option value="16:00">04:00 PM</option>
+                  <option value="17:00">05:00 PM</option>
+                  <option value="18:00">06:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <div class="counter-input">
+                <button type="button" class="counter-btn" id="guestMinus">−</button>
+                <span id="guestCount">1</span>
+                <button type="button" class="counter-btn" id="guestPlus">+</button>
+                <input type="hidden" name="guests" id="guestInput" value="1" />
+              </div>
+              <p class="input-note">Min 1 / Max 20 guests · ₩20,000 per person</p>
+            </div>
+            <div class="price-summary">
+              <span>Estimated Total</span>
+              <strong id="priceTotal">₩20,000</strong>
+            </div>
+            <button type="button" class="btn btn-primary full" onclick="goToStep(2)">Continue →</button>
+          </div>
+
+          <!-- Step 2: Guest Info -->
+          <div class="form-step" id="step2">
+            <h3 class="step-title">2. Your Information</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Gildong" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Hong" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+82 10-0000-0000" />
+            </div>
+            <div class="form-group">
+              <label for="notes">Special Requests (optional)</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Group details, accessibility needs, anything else..."></textarea>
+            </div>
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" onclick="goToStep(1)">← Back</button>
+              <button type="button" class="btn btn-primary" onclick="goToStep(3)">Continue →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Payment -->
+          <div class="form-step" id="step3">
+            <h3 class="step-title">3. Payment</h3>
+            <div class="booking-summary" id="bookingSummary">
+              <!-- filled by JS -->
+            </div>
+
+            <div class="form-group">
+              <label>Card Details</label>
+              <div id="stripe-card-element" class="stripe-input"></div>
+              <div id="card-errors" class="card-error" role="alert"></div>
+            </div>
+
+            <div class="stripe-notice">
+              <span class="lock-icon">🔒</span>
+              Payments are securely processed by <strong>Stripe</strong>.
+            </div>
+
+            <div class="form-nav">
+              <button type="button" class="btn btn-ghost" onclick="goToStep(2)">← Back</button>
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                <span id="submitText">Pay & Confirm Booking</span>
+                <span id="submitSpinner" class="spinner hidden"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 4: Success -->
+          <div class="form-step" id="step4">
+            <div class="success-state">
+              <div class="success-icon">✓</div>
+              <h3>Booking Confirmed!</h3>
+              <p>Thank you — a confirmation has been sent to your email. We look forward to seeing you at Insadong.</p>
+              <div class="booking-ref" id="bookingRef"></div>
+              <button type="button" class="btn btn-ghost" onclick="resetForm()">Book Another Session</button>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="step-indicator">
+          <div class="step-dot active" id="dot1">1</div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="dot2">2</div>
+          <div class="step-line"></div>
+          <div class="step-dot" id="dot3">3</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">箸</span>
+        <span class="logo-text">INSA CHOPSTICK</span>
+      </div>
+      <p class="footer-copy">© 2026 Insa Chopstick Workshop. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="mailto:hello@insachopstick.com">Contact</a>
+        <a href="#booking">Book Now</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
